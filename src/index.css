@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  outline: 1px solid red;
+}
+
+@layer components {
+  .about-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../src/assets/images/about-page-images/hero-section-bg.webp");
+    background-size: contain;
+    background-position: center top;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 450px) {
+  div.homecards {
+    margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  div.homecards {
+    margin-top: 10rem;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  div.homecards {
+    margin-top: 12rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 789px) {
+  div.homecards {
+    padding-top: 0rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 790px) {
+  div.homecards {
+    margin-top: 13rem;
+  }
+}
