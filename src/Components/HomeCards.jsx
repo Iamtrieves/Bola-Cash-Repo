@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "./Cards";
-import data from "/cards.json";
+import data from "../../cards";
 
 const HomeCards = () => {
   return (
@@ -17,7 +17,7 @@ const HomeCards = () => {
         </p>
       </div>
       <div className="flex lg:flex-row flex-col gap-[1.5rem]">
-        {data.Card.map((card) => (
+        {data.map((card) => (
           <Cards
             key={card.id}
             image={card.image}
