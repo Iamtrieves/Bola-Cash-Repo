@@ -10,10 +10,16 @@
   .about-hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url("../src/assets/images/about-page-images/hero-section-bg.webp");
-    background-size: contain;
-    background-position: center top;
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center center; /* Positions the image in the center */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    height: 100%; /* Ensures the height of the container adapts properly */
+    min-width: 100%;
+    min-width: 100vw;
+    /* overflow-x: hidden; */
   }
 }
+
 @media screen and (min-width: 360px) and (max-width: 450px) {
   div.homecards {
     margin-top: 5rem;
