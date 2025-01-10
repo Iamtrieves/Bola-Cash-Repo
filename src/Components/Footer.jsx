@@ -14,7 +14,7 @@ const Footer = () => {
     <div
       className={`flex ${
         screenWidth >= 1024 ? "flex-row" : "flex-col"
-      } lg:pl-[4.75rem] pl-[1.5rem] lg:pt-[4rem] pt-[1.875rem] gap-[1.875rem]`}
+      } lg:pl-[4.75rem] pl-[1.5rem] lg:pt-[4rem] pt-[1.875rem] gap-[1.875rem] bg-white`}
     >
       {/* First Element */}
       <div className="flex flex-col gap-8 flex-1">

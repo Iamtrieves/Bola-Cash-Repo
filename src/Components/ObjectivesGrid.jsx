@@ -7,7 +7,7 @@ const ObjectivesGrid = () => {
         <h1 className="font-semibold lg:text-[2.5rem] text-[1.5rem] lg:leading-[3.0475rem] leading-[1.815625rem]">
           Objectives
         </h1>
-        <div className="lg:grid-cols-2 grid lg:gap-[3.125rem]">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-[3.125rem] lg:gap-y-0">
           {data.map((objectives) => (
             <div key={objectives.id} className="lg:mb-[1rem] mb-[1.875rem]">
               <h2 className="font-semibold lg:text-[1.5rem] lg:leading-[1.82875rem] text-[1rem] leading-[1.21rem]">

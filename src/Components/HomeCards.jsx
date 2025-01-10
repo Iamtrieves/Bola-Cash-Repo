@@ -24,7 +24,7 @@ const HomeCards = ({ maxCards }) => {
         {cardsToRender.map((card) => (
           <div
             key={card.id}
-            className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
+            className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] flex" // Flex wrapper
           >
             <Cards
               image={card.image}

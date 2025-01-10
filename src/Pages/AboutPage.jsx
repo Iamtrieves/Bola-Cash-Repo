@@ -45,7 +45,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <LayoutBackground topPosition="2250px" secondImageHeight="0px" />
+      <LayoutBackground topPosition="1820px" secondImageHeight="700px" />
       <HomeCards />
       <ObjectivesGrid />
     </div>

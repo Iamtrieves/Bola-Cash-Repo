@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = ({ image, title, description }) => {
   return (
-    <div className="bg-white flex flex-col gap-[2.5rem] rounded-[1.25rem] shadow-2xl border-[#228B2240] border pt-[1.875rem] pb-[0.9375rem] px-[1.4375rem]">
+    <div className="bg-white flex flex-col gap-[2.5rem] rounded-[1.25rem] shadow-2xl border-[#228B2240] border pt-[1.875rem] pb-[0.9375rem] px-[1.4375rem] flex-1">
       <img
         className="rounded-[6.25rem] mx-auto w-[6.25rem] h-[6.25rem] object-cover border-[0.8125rem] border-[#BADBBA]"
         src={image}
