@@ -2,7 +2,9 @@ import React from "react";
 import Cards from "./Cards";
 import data from "../../cards";
 
-const HomeCards = () => {
+const HomeCards = ({ maxCards }) => {
+  const cardsToRender = maxCards ? data.slice(0, maxCards) : data;
+
   return (
     <div className="relative homecards lg:mx-[3.5rem] mx-[1.3125rem] lg:pt-[10.25rem] md:pt-[13rem]">
       <div className="lg:text-center">
@@ -16,14 +18,20 @@ const HomeCards = () => {
           Explore now and start your journey towards a greener future.
         </p>
       </div>
-      <div className="flex lg:flex-row flex-col gap-[1.5rem]">
-        {data.map((card) => (
-          <Cards
+
+      {/* Flex container */}
+      <div className="flex flex-wrap gap-[1.5rem]">
+        {cardsToRender.map((card) => (
+          <div
             key={card.id}
-            image={card.image}
-            title={card.title}
-            description={card.description}
-          />
+            className="w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
+          >
+            <Cards
+              image={card.image}
+              title={card.title}
+              description={card.description}
+            />
+          </div>
         ))}
       </div>
     </div>

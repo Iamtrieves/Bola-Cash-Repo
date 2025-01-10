@@ -5,18 +5,23 @@
 * {
   /* outline: 1px solid red; */
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 @layer components {
   .about-hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url("../src/assets/images/about-page-images/hero-section-bg.webp");
-    background-size: cover; /* Ensures the image covers the container */
-    background-position: center center; /* Positions the image in the center */
-    background-repeat: no-repeat; /* Prevents repeating of the image */
-    height: 100%; /* Ensures the height of the container adapts properly */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
     min-width: 100%;
     min-width: 100vw;
-    /* overflow-x: hidden; */
   }
 }
 

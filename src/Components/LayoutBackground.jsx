@@ -5,23 +5,27 @@ const LayoutBackground = ({
   secondImageHeight = "1000px",
 }) => {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* Background Image */}
       <div
-        className={`absolute hidden lg:block z-[-1]`}
+        className={`absolute hidden lg:block z-[-1] w-full`}
         style={{ top: topPosition }}
       >
-        <img
-          src={RecycleBackground}
-          alt="Background Fading Image"
-          className="w-full h-full object-cover opacity-5 scale-[1.5]"
-        />
-        <img
-          src={RecycleBackground}
-          alt="Background Fading Image"
-          className={`w-full object-cover opacity-5 scale-[1.5]`}
-          style={{ height: secondImageHeight }}
-        />
+        <div className="relative w-full h-full overflow-x-hidden">
+          <img
+            src={RecycleBackground}
+            alt="Background Fading Image"
+            className="w-full h-full object-cover opacity-5 scale-[1.5] overflow-x-hidden"
+          />
+        </div>
+        <div className="relative w-full h-full overflow-hidden">
+          <img
+            src={RecycleBackground}
+            alt="Background Fading Image"
+            className={`w-full object-cover opacity-5 scale-[1.5] overflow-x-hidden`}
+            style={{ height: secondImageHeight }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -12,8 +12,8 @@ const HomePage = () => {
     <div className="relative overflow-x-hidden w-full">
       <HomeHero />
       {/* Background Image */}
-      <LayoutBackground />
-      <HomeCards />
+      <LayoutBackground topPosition="850px" />
+      <HomeCards maxCards={3} />
       <section className="lg:mt-[14rem] mt-[1.875rem] grid lg:grid-cols-2 grid-cols-1 lg:gap-[3.0625rem] gap-[1.875rem] items-center lg:px-[3.5rem] px-[1.3125rem]">
         <div className="flex flex-col lg:gap-[2.75rem] gap-[0.75rem]">
           <div className="flex flex-col lg:gap-[1.5rem] gap-[0.75rem]">
