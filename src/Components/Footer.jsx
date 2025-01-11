@@ -24,7 +24,7 @@ const Footer = () => {
             <div>
               <img src={BolaCashLogo} alt="" />
             </div>
-            <div>
+            <div className="pr-5">
               <p className="font-normal text-[1rem] leading-[1.21rem]">
                 Click below to get started and be a part of the change!
               </p>
@@ -39,7 +39,7 @@ const Footer = () => {
             <div>
               <img src={BolaCashLogo} alt="" />
             </div>
-            <div>
+            <div className="lg:pr-0 pr-5">
               <p className="font-normal text-[1rem] leading-[1.21rem]">
                 Ready to make a difference? Join our community of eco-warriors
                 and start recycling with ease! Together, we can create a
