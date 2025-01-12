@@ -55,8 +55,8 @@ const HamburgerMenu = () => {
             onClick={closeMenu} // Close menu on click
             className={({ isActive }) =>
               isActive
-                ? "text-xl font-bold hover:underline hover:text-green-600"
-                : "text-xl hover:underline hover:text-green-600"
+                ? "text-xl font-bold  hover:text-black-600"
+                : "text-xl  hover:text-black-600"
             }
           >
             Home
@@ -66,30 +66,19 @@ const HamburgerMenu = () => {
             onClick={closeMenu} // Close menu on click
             className={({ isActive }) =>
               isActive
-                ? "text-xl font-bold hover:underline hover:text-green-600"
-                : "text-xl hover:underline hover:text-green-600"
+                ? "text-xl font-bold  hover:text-black-600"
+                : "text-xl  hover:text-black-600"
             }
           >
             About
-          </NavLink>
-          <NavLink
-            to="/eco-tips"
-            onClick={closeMenu} // Close menu on click
-            className={({ isActive }) =>
-              isActive
-                ? "text-xl font-bold hover:underline hover:text-green-600"
-                : "text-xl hover:underline hover:text-green-600"
-            }
-          >
-            EcoTips
           </NavLink>
           <NavLink
             to="/contact"
             onClick={closeMenu} // Close menu on click
             className={({ isActive }) =>
               isActive
-                ? "text-xl font-bold hover:underline hover:text-green-600"
-                : "text-xl hover:underline hover:text-green-600"
+                ? "text-xl font-bold  hover:text-black-600"
+                : "text-xl  hover:text-black-600"
             }
           >
             Contact

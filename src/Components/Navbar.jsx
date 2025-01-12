@@ -28,14 +28,7 @@ const Navbar = () => {
           >
             About
           </NavLink>
-          <NavLink
-            to="/eco-tips"
-            className={({ isActive }) =>
-              isActive ? "font-bold text-black" : "text-black"
-            }
-          >
-            EcoTips
-          </NavLink>
+
           <NavLink
             to="/contact"
             className={({ isActive }) =>
