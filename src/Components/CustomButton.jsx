@@ -1,8 +1,19 @@
-import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const CustomButton = (props) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (props.to) {
+      navigate(props.to); //  Navigate to the specified route
+    }
+    if (props.onClick) {
+      props.onClick(); // Optionally call additional onclick logic
+    }
+  };
+
   return (
     <button
+      onClick={handleClick}
       className={
         props.style
           ? props.style

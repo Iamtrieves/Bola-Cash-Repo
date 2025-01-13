@@ -40,11 +40,12 @@ const Navbar = () => {
         </div>
         <div className="items-center gap-[1rem] md:flex lg:flex hidden">
           <CustomButton
+            to="/sign-up"
             style="text-black p-[0.625rem] text-md"
             text="Sign In"
           ></CustomButton>
           <hr className="border border-black h-[1.5rem]" />
-          <CustomButton text="Sign Up"></CustomButton>
+          <CustomButton text="Sign Up" to="/sign-up"></CustomButton>
         </div>
         <div className="md:hidden">
           <HamburgerMenu />

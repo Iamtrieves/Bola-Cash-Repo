@@ -23,6 +23,16 @@ body {
     min-width: 100%;
     min-width: 100vw;
   }
+  .signup-form-background {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("../src/assets/images/recycling-selection-image.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 450px) {
