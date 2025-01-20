@@ -90,7 +90,7 @@ const HamburgerMenu = () => {
           <CustomButton
             style="text-black p-[0.625rem] text-md bg-transparent"
             text="Sign In"
-            to="/sign-up"
+            to="/sign-in"
           />
           <hr className="border border-gray-400 w-1/2" />
           <CustomButton

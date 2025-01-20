@@ -5,7 +5,7 @@ import MessageIcon from "../assets/icons/message-icon.svg";
 const ContactPageHero = () => {
   return (
     <>
-      <div className="m-[1.75rem] lg:mt-[7.625rem] lg:mx-[3.6rem] flex flex-col lg:gap-[8.5rem] gap-[1.8rem]">
+      <div className="m-[1.75rem] lg:mt-[4.625rem] lg:mx-[3.6rem] flex flex-col lg:gap-[5.5rem] gap-[1.8rem]">
         <section className="flex flex-col justify-center items-center">
           <h1 className="font-semibold text-[1.5rem] leading-[1.815625rem] lg:text-[3rem] lg:leading-[3.630625rem]">
             Contact Us
@@ -15,7 +15,7 @@ const ContactPageHero = () => {
           </p>
         </section>
         <section className="flex lg:flex-row flex-col lg:gap-[4.75rem] gap-[2rem] w-full">
-          <section className="p-[2.5rem] border shadow-sm lg:w-1/3 flex flex-col lg:gap-[2rem] gap-[1.5rem]">
+          <section className="p-[2.5rem] bg-white border shadow-sm lg:w-1/3 flex flex-col lg:gap-[2rem] gap-[1.5rem]">
             <div className="flex flex-col gap-[1.5rem]">
               <div className="flex items-center gap-[1rem] font-medium lg:text-[1rem] lg:leading-[1.5rem]">
                 <img src={PhoneIcon} alt="" />
@@ -49,7 +49,7 @@ const ContactPageHero = () => {
               </p>
             </div>
           </section>
-          <section className="lg:p-[2rem] p-4 shadow-sm flex flex-col gap-[1.5rem] border lg:w-2/3">
+          <section className="lg:p-[2rem] bg-white p-4 shadow-sm flex flex-col gap-[1.5rem] border lg:w-2/3">
             <div className="flex lg:flex-row flex-col gap-4 w-full">
               <input
                 type="text"

@@ -2,6 +2,7 @@ import RecycleBackground from "../assets/Images/landing-page-images/repeated-rec
 
 const LayoutBackground = ({
   topPosition = "1150px",
+  firstImageHeight = "h-full",
   secondImageHeight = "1000px",
 }) => {
   return (
@@ -15,7 +16,8 @@ const LayoutBackground = ({
           <img
             src={RecycleBackground}
             alt="Background Fading Image"
-            className="w-full h-full object-cover opacity-5 scale-[1.5] overflow-x-hidden"
+            className="w-full object-cover opacity-5 scale-[1.5] overflow-x-hidden"
+            style={{ height: firstImageHeight }}
           />
         </div>
         <div className="relative w-full h-full overflow-hidden">

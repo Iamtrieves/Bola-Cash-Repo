@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="items-center gap-[1rem] md:flex lg:flex hidden">
           <CustomButton
-            to="/sign-up"
+            to="/sign-in"
             style="text-black p-[0.625rem] text-md"
             text="Sign In"
           ></CustomButton>
