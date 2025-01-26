@@ -7,7 +7,11 @@ import XWhiteIcon from "../assets/icons/x-white.svg";
 import XIcon from "../assets/icons/x.svg";
 import InstagramWhiteIcon from "../assets/icons/instagram-white.svg";
 import InstagramIcon from "../assets/icons/instagram.svg";
+import { useNavigate } from "react-router-dom";
+import useAuth from "./auth";
 const Footer = () => {
+  const { isSignedIn, setIsSignedIn } = useAuth();
+  const navigate = useNavigate();
   const screenWidth = UseWindowSize();
   const currentYear = new Date().getFullYear();
   return (
@@ -30,7 +34,18 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <CustomButton text="Get Started" />
+              <CustomButton
+                text={isSignedIn ? "Explore" : "Get Started"}
+                onClick={
+                  isSignedIn
+                    ? () => {
+                        navigate("/about");
+                      }
+                    : () => {
+                        navigate("/sign-up");
+                      }
+                }
+              />
             </div>
           </>
         ) : (
@@ -48,7 +63,18 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <CustomButton text="Explore" />
+              <CustomButton
+                text={isSignedIn ? "Explore" : "Get Started"}
+                onClick={
+                  isSignedIn
+                    ? () => {
+                        navigate("/about");
+                      }
+                    : () => {
+                        navigate("/sign-up");
+                      }
+                }
+              />
             </div>
           </>
         )}

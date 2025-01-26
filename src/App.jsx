@@ -1,4 +1,5 @@
 import React from "react";
+import { AuthProvider } from "./Components/auth";
 import MainLayout from "./Layouts/MainLayout";
 import {
   Route,
@@ -16,7 +17,7 @@ const App = () => {
     createRoutesFromElements(
       <>
         <Route path="/" element={<MainLayout />}>
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
@@ -25,7 +26,12 @@ const App = () => {
       </>
     )
   );
-  return <RouterProvider router={router} />;
+
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 };
 
 export default App;

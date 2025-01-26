@@ -1,7 +1,11 @@
 import React from "react";
 import WomanWithPlasticBag from "../assets/Images/young-woman.png";
 import CustomButton from "./CustomButton";
+import useAuth from "./auth";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+  const { isSignedIn, setIsSignedIn } = useAuth();
+  const navigate = useNavigate();
   return (
     <div className="bg-white lg:pt-[7rem] mt-[8.25rem] lg:mt-[5.8125rem] sm:pb-[-50rem] lg:mx-[3.5rem] mx-[1.3125rem] grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-[2rem] gap-[1.875rem]">
       <div className="flex flex-col lg:gap-[2.875rem] gap-[0.75rem]">
@@ -19,7 +23,16 @@ const Hero = () => {
         <div>
           <CustomButton
             style="py-[1rem] lg:px-[2rem] px-[1.375rem] bg-[#228B22] rounded-[0.25rem] text-white font-semibold lg:text-[1.406875rem] lg:leading-[1.7025rem] text-[1rem] leading:[1.21rem] md:w-auto"
-            text="Get Started"
+            text={isSignedIn ? "Explore" : "Get Started"}
+            onClick={
+              isSignedIn
+                ? () => {
+                    navigate("/about");
+                  }
+                : () => {
+                    navigate("/sign-up");
+                  }
+            }
           ></CustomButton>
         </div>
       </div>

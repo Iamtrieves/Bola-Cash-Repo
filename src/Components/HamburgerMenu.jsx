@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import CustomButton from "./CustomButton";
+import useAuth from "./auth";
 
 const HamburgerMenu = () => {
   const [isOn, setIsOn] = useState(false);
+  const { isSignedIn, setIsSignedIn } = useAuth();
 
+  const handleLogout = () => {
+    setIsSignedIn(false); // Update state to log out
+  };
   const toggleState = () => {
     setIsOn((prevState) => !prevState); // Toggle the state
   };
@@ -86,19 +91,30 @@ const HamburgerMenu = () => {
         </nav>
 
         {/* Buttons at the Bottom */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4">
-          <CustomButton
-            style="text-black p-[0.625rem] text-md bg-transparent"
-            text="Sign In"
-            to="/sign-in"
-          />
-          <hr className="border border-gray-400 w-1/2" />
-          <CustomButton
-            style="bg-[#228B22] font-semibold text-white p-[0.625rem] text-md rounded-md"
-            text="Sign Up"
-            to="/sign-up"
-          />
-        </div>
+        {isSignedIn ? (
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4">
+            <p className="text-black p-[0.625rem] text-md">Hi There!</p>
+            <CustomButton
+              style="text-black p-[0.625rem] text-md"
+              text="Logout"
+              onClick={handleLogout} // Logout handler
+            />
+          </div>
+        ) : (
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4">
+            <CustomButton
+              style="text-black p-[0.625rem] text-md bg-transparent"
+              text="Sign In"
+              to="/sign-in"
+            />
+            <hr className="border border-gray-400 w-1/2" />
+            <CustomButton
+              style="bg-[#228B22] font-semibold text-white p-[0.625rem] text-md rounded-md"
+              text="Sign Up"
+              to="/sign-up"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

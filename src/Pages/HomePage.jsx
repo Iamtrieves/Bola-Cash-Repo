@@ -6,8 +6,12 @@ import CustomButton from "../Components/CustomButton";
 import UnlockEcoWisdomImage from "../assets/Images/landing-page-images/unlock-eco-wisdom.svg";
 import HowItWorksImage from "../assets/Images/landing-page-images/how-it-works.svg";
 import OrderImage from "../assets/Images/landing-page-images/landing-page-order-icon.svg";
-
+import useAuth from "../Components/auth";
+import { useNavigate } from "react-router-dom";
 const HomePage = () => {
+  const { isSignedIn, setIsSignedIn } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <div className="relative overflow-x-hidden w-full">
       <HomeHero />
@@ -29,7 +33,18 @@ const HomePage = () => {
             </p>
           </div>
           <div>
-            <CustomButton text="Explore"></CustomButton>
+            <CustomButton
+              text={isSignedIn ? "Explore" : "Get Started"}
+              onClick={
+                isSignedIn
+                  ? () => {
+                      navigate("/about");
+                    }
+                  : () => {
+                      navigate("/sign-up");
+                    }
+              }
+            ></CustomButton>
           </div>
         </div>
         <div>
