@@ -3,7 +3,7 @@ import React from "react";
 const Modal = ({ isVisible }) => {
   return (
     <div
-      className={`w-44 text-center absolute shadow-md border border-[#E9F3E9] z-10 lg:top-16 top-[-165%] lg:right-[60%] right-[-10%] p-2 rounded-2xl bg-[#E9F3E9] transition-all duration-300 transform ${
+      className={`w-44 text-center absolute shadow-md border border-[#E9F3E9] z-10 lg:top-16 md:top-16 top-[-165%] lg:right-[60%] md:right-[60%] right-[-10%] p-2 rounded-2xl bg-[#E9F3E9] transition-all duration-300 transform ${
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 -translate-y-10 z-0"
