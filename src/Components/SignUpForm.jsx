@@ -121,10 +121,16 @@ const SignUpForm = () => {
       <section
         className={`flex lg:flex-row lg:p-[5rem] p-[1.8125rem] ${
           toggle ? "flex-col lg:flex-row-reverse" : "flex-col-reverse"
-        } flex-grow h-full w-full`}
+        } flex-grow h-full w-full `}
       >
         {/* Left Section */}
-        <section className="signup-form-background shadow-md lg:rounded-tl-3xl lg:rounded-bl-3xl lg:w-1/2 flex p-4 flex-col items-center justify-center">
+        <section
+          className={`signup-form-background shadow-md ${
+            toggle
+              ? "rounded-tr-xl rounded-tl-xl lg:rounded-tl-none  lg:rounded-tr-3xl lg:rounded-br-3xl"
+              : "rounded-bl-xl rounded-br-xl lg:rounded-br-none  lg:rounded-tl-3xl lg:rounded-bl-3xl"
+          } lg:w-1/2 flex p-4 flex-col items-center justify-center`}
+        >
           <div className="flex flex-col justify-center items-center gap-[1rem]">
             <h1 className="font-semibold text-[1.5rem] leading-[2.125rem] lg:text-[3rem] lg:leading-[4.5rem]">
               {toggle ? "Welcome Back!" : "Welcome!"}
@@ -143,7 +149,13 @@ const SignUpForm = () => {
         </section>
 
         {/* Right Section */}
-        <section className="lg:w-1/2 bg-white lg:py-[3rem] p-3 lg:px-[1.8125rem] border lg:rounded-tr-3xl lg:rounded-br-3xl shadow-sm">
+        <section
+          className={`lg:w-1/2 bg-white lg:py-[3rem] p-3 lg:px-[1.8125rem] border ${
+            toggle
+              ? "lg:rounded-tl-3xl lg:rounded-bl-3xl rounded-bl-xl lg:rounded-br-none rounded-br-xl"
+              : "lg:rounded-tr-3xl lg:rounded-br-3xl rounded-tr-xl lg:rounded-tl-none rounded-tl-xl"
+          }   shadow-sm`}
+        >
           {isSignedUp || !toggle ? (
             // Sign-In Form
             <div className="lg:p-6">
