@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import CustomButton from "./CustomButton";
 import useAuth from "./auth";
+import ProfileIcon from "../assets/icons/profile-icon.svg";
+import CaretUpIcon from "../assets/icons/caret-up-icon.svg";
 
 const HamburgerMenu = () => {
+  const [isCaretUp, setIsCaretUp] = useState(false);
   const [isOn, setIsOn] = useState(false);
   const { isSignedIn, setIsSignedIn } = useAuth();
 
@@ -93,10 +96,28 @@ const HamburgerMenu = () => {
         {/* Buttons at the Bottom */}
         {isSignedIn ? (
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4">
-            <p className="text-black p-[0.625rem] text-md">Hi There!</p>
+            <div
+              className="flex items-center gap-3 cursor-pointer"
+              onClick={() => {
+                setIsCaretUp(!isCaretUp);
+              }}
+            >
+              <div>
+                <img src={ProfileIcon} alt="Profile Icon" />
+              </div>
+              <h1>Profile</h1>
+              <div>
+                <img
+                  className={`transform transition-transform duration-300 ${
+                    isCaretUp ? "rotate-0" : "rotate-180"
+                  }`}
+                  src={CaretUpIcon}
+                  alt="Caret Up Icon"
+                />
+              </div>
+            </div>
             <CustomButton
-              style="text-black p-[0.625rem] text-md"
-              text="Logout"
+              text="Request for pickup"
               onClick={handleLogout} // Logout handler
             />
           </div>

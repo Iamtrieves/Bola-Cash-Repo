@@ -3,9 +3,13 @@ import BolaCashLogo from "../assets/Images/Bola-Logo.svg";
 import CustomButton from "./CustomButton";
 import HamburgerMenu from "./HamburgerMenu";
 import useAuth from "./auth";
+import ProfileIcon from "../assets/icons/profile-icon.svg";
+import CaretUpIcon from "../assets/icons/caret-up-icon.svg";
+import { useState } from "react";
 
 const Navbar = () => {
   const { isSignedIn, setIsSignedIn } = useAuth(); // Access auth state and setter
+  const [isCaretUp, setIsCaretUp] = useState(false);
 
   const handleLogout = () => {
     setIsSignedIn(false); // Update state to log out
@@ -55,10 +59,29 @@ const Navbar = () => {
         {/* Authentication Buttons */}
         {isSignedIn ? (
           <div className="items-center gap-[1rem] md:flex lg:flex hidden">
-            <p className="text-black p-[0.625rem] text-md">Hi There!</p>
+            <div
+              className="flex items-center gap-3 cursor-pointer"
+              onClick={() => {
+                setIsCaretUp(!isCaretUp);
+              }}
+            >
+              <div>
+                <img src={ProfileIcon} alt="Profile Icon" />
+              </div>
+              <h1>Profile</h1>
+              <div>
+                <img
+                  className={`transform transition-transform duration-300 ${
+                    isCaretUp ? "rotate-0" : "rotate-180"
+                  }`}
+                  src={CaretUpIcon}
+                  alt="Caret Up Icon"
+                />
+              </div>
+            </div>
+            <hr className="border border-black h-[1.5rem]" />
             <CustomButton
-              style="text-black p-[0.625rem] text-md"
-              text="Logout"
+              text="Request for pickup"
               onClick={handleLogout} // Logout handler
             />
           </div>
