@@ -9,12 +9,8 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 const Navbar = () => {
-  const { isSignedIn, setIsSignedIn } = useAuth(); // Access auth state and setter
   const [isCaretUp, setIsCaretUp] = useState(false);
-
-  const handleLogout = () => {
-    setIsSignedIn(false); // Update state to log out
-  };
+  const { isSignedIn, setIsSignedIn } = useAuth(); // Access auth state and setter
 
   return (
     <>
@@ -83,10 +79,7 @@ const Navbar = () => {
               </div>
               <Modal isVisible={isCaretUp} />
               <hr className="border border-black h-[1.5rem]" />
-              <CustomButton
-                text="Request for pickup"
-                onClick={handleLogout} // Logout handler
-              />
+              <CustomButton text="Request for pickup" />
             </div>
           ) : (
             <div className="items-center gap-[1rem] md:flex lg:flex hidden">

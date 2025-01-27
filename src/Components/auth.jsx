@@ -5,7 +5,7 @@ const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   // Initialize state from localStorage or default to false
   const [isSignedIn, setIsSignedIn] = useState(() => {
-    return JSON.parse(localStorage.getItem("isSignedIn")) || true;
+    return JSON.parse(localStorage.getItem("isSignedIn")) || false;
   });
 
   // Persist state to localStorage whenever it changes
