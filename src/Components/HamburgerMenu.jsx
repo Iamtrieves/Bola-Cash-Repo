@@ -4,6 +4,7 @@ import CustomButton from "./CustomButton";
 import useAuth from "./auth";
 import ProfileIcon from "../assets/icons/profile-icon.svg";
 import CaretUpIcon from "../assets/icons/caret-up-icon.svg";
+import Modal from "./Modal";
 
 const HamburgerMenu = () => {
   const [isCaretUp, setIsCaretUp] = useState(false);
@@ -115,6 +116,7 @@ const HamburgerMenu = () => {
                   alt="Caret Up Icon"
                 />
               </div>
+              <Modal isVisible={isCaretUp} />
             </div>
             <CustomButton
               text="Request for pickup"

@@ -30,7 +30,9 @@ const Footer = () => {
             </div>
             <div className="pr-5">
               <p className="font-normal text-[1rem] leading-[1.21rem]">
-                Click below to get started and be a part of the change!
+                {isSignedIn
+                  ? "Click the 'Contact Us' button now to connect with out team and learn how you can make a difference!"
+                  : "Click below to get started and be a part of the change!"}
               </p>
             </div>
             <div>
@@ -64,7 +66,7 @@ const Footer = () => {
             </div>
             <div>
               <CustomButton
-                text={isSignedIn ? "Explore" : "Get Started"}
+                text={isSignedIn ? "Contact Us" : "Get Started"}
                 onClick={
                   isSignedIn
                     ? () => {
