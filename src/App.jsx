@@ -1,5 +1,7 @@
 import React from "react";
 import { AuthProvider } from "./Components/auth";
+import { PopUpProvider } from "./Components/PopUpContext";
+import { LoadingProvider } from "./assets/context/LoadingAnimationContext";
 import MainLayout from "./Layouts/MainLayout";
 import {
   Route,
@@ -29,7 +31,11 @@ const App = () => {
 
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      <PopUpProvider>
+        <LoadingProvider>
+          <RouterProvider router={router} />
+        </LoadingProvider>
+      </PopUpProvider>
     </AuthProvider>
   );
 };

@@ -118,10 +118,7 @@ const HamburgerMenu = () => {
               </div>
               <Modal isVisible={isCaretUp} />
             </div>
-            <CustomButton
-              text="Request for pickup"
-              onClick={handleLogout} // Logout handler
-            />
+            <CustomButton text="Request for pickup" />
           </div>
         ) : (
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4">
