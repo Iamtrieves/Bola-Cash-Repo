@@ -5,11 +5,13 @@ import useAuth from "./auth";
 import ProfileIcon from "../assets/icons/profile-icon.svg";
 import CaretUpIcon from "../assets/icons/caret-up-icon.svg";
 import Modal from "./Modal";
+import { useRequest } from "../assets/context/RequestPickUpContext.jsx";
 
 const HamburgerMenu = () => {
   const [isCaretUp, setIsCaretUp] = useState(false);
   const [isOn, setIsOn] = useState(false);
   const { isSignedIn, setIsSignedIn } = useAuth();
+  const { showRequest } = useRequest();
 
   const handleLogout = () => {
     setIsSignedIn(false); // Update state to log out
@@ -118,7 +120,7 @@ const HamburgerMenu = () => {
               </div>
               <Modal isVisible={isCaretUp} />
             </div>
-            <CustomButton text="Request for pickup" />
+            <CustomButton text="Request for pickup" onClick={showRequest} />
           </div>
         ) : (
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4">

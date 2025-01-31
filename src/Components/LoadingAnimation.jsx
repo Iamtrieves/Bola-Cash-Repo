@@ -5,7 +5,7 @@ const LoadingAnimation = ({ isVisible }) => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-[#228B2233] backdrop-blur-sm z-20"></div>
+      <div className="fixed inset-0 bg-black opacity-50 backdrop-blur-sm z-20"></div>
       <div className="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
         <div className="animate-bounceSlow size-20">
           <img

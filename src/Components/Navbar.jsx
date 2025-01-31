@@ -7,10 +7,12 @@ import ProfileIcon from "../assets/icons/profile-icon.svg";
 import CaretUpIcon from "../assets/icons/caret-up-icon.svg";
 import { useState } from "react";
 import Modal from "./Modal";
+import { useRequest } from "../assets/context/RequestPickUpContext.jsx";
 
 const Navbar = () => {
   const [isCaretUp, setIsCaretUp] = useState(false);
-  const { isSignedIn, setIsSignedIn } = useAuth(); // Access auth state and setter
+  const { showRequest } = useRequest();
+  const { isSignedIn } = useAuth(); // Access auth state and setter
 
   return (
     <>
@@ -79,7 +81,7 @@ const Navbar = () => {
               </div>
               <Modal isVisible={isCaretUp} />
               <hr className="border border-black h-[1.5rem]" />
-              <CustomButton text="Request for pickup" />
+              <CustomButton text="Request for pickup" onClick={showRequest} />
             </div>
           ) : (
             <div className="items-center gap-[1rem] md:flex lg:flex hidden">
