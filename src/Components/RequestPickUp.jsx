@@ -12,7 +12,7 @@ const RequestPickUp = ({ isVisible }) => {
       <div className="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 p-[1rem] bg-white rounded-md shadow-md md:w-[75%] sm:w-[65%] w-[85%] lg:w-[34rem]">
         <div>
           <div className="flex items-center w-full relative py-[0.4375rem]">
-            <h1 className="font-semibold flex-wrap flex py-[0.375rem] lg:text-[1.5rem] md:text-[1.2rem] text-[1rem] lg:leading-[2.25rem] leading-[1.5rem] mx-auto">
+            <h1 className="font-semibold flex-wrap flex py-[0.375rem] lg:text-[1.5rem] md:text-[1rem] text-[0.9rem] lg:leading-[2.25rem] leading-[1.5rem] mx-auto">
               Enter Amount of Recyclables
             </h1>
             <div className="lg:size-10 size-7 absolute right-0 justify-end flex">
@@ -31,7 +31,7 @@ const RequestPickUp = ({ isVisible }) => {
             </p>
           </div>
           <div className="flex flex-col w-full lg:gap-3 gap-2 justify-center items-center">
-            <div className="lg:w-[5rem] w-[3rem] justify-center items-center flex">
+            <div className="lg:w-[5rem] w-[4rem] justify-center items-center flex">
               <input
                 type="number"
                 className="w-full lg:py-[1rem] py-[0.8rem] rounded-md bg-[green] text-white p-2 border border-[#4EA24E]"
@@ -71,7 +71,7 @@ const RequestPickUp = ({ isVisible }) => {
             </div>
             <div className="w-full">
               <CustomButton
-                style="bg-[#228B22] w-full rounded-[0.25rem] text-white lg:p-[0.625rem] p-[0.425] font-semibold"
+                style="bg-[#228B22] w-full rounded-[0.25rem] text-white lg:p-[0.625rem] font-semibold"
                 text="Request for pickup"
               />
             </div>
