@@ -13,7 +13,6 @@ import { RequestPickUpProvider } from "./assets/context/RequestPickUpContext";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {/* ✅ Wrap MainLayout inside RequestPickUpProvider */}
       <Route
         path="/"
         element={
