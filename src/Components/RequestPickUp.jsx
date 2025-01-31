@@ -12,7 +12,7 @@ const RequestPickUp = ({ isVisible }) => {
       <div className="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 p-[1rem] bg-white rounded-md shadow-md lg:w-[34rem]">
         <div>
           <div className="flex items-center w-full relative py-[0.4375rem]">
-            <h1 className="font-semibold flex-wrap flex py-[0.375rem] lg:text-[1.5rem] text-[0.9rem] sm:text-[0.725rem] lg:leading-[2.25rem] leading-[1.5rem] mx-auto">
+            <h1 className="font-semibold flex-wrap flex py-[0.375rem] lg:text-[1.5rem] text-[1.2rem] lg:leading-[2.25rem] leading-[1.5rem] mx-auto">
               Enter Amount of Recyclables
             </h1>
             <div className="lg:size-10 size-7 absolute right-0 justify-end flex">
