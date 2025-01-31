@@ -71,7 +71,7 @@ const RequestPickUp = ({ isVisible }) => {
             </div>
             <div className="w-full">
               <CustomButton
-                style="bg-[#228B22] w-full rounded-[0.25rem] text-white lg:p-[0.925rem] font-semibold"
+                style="bg-[#228B22] w-full rounded-[0.25rem] text-white lg:p-[0.925rem] py-[1.5rem] font-semibold"
                 text="Request for pickup"
               />
             </div>
