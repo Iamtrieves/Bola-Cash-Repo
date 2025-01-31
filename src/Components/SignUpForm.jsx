@@ -4,7 +4,7 @@ import CustomButton from "./CustomButton";
 import LocationIcon from "../assets/icons/location.svg";
 import { createAccount, signIn } from "../requests/apiService";
 import useAuth from "./auth";
-import { usePopUp } from "./PopUpContext";
+import { usePopUp } from "../assets/context/PopUpContext";
 import { useLoading } from "../assets/context/LoadingAnimationContext";
 
 const SignUpForm = () => {

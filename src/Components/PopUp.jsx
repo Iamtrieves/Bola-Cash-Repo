@@ -45,15 +45,6 @@ const PopUp = ({ isVisible, onClose, message, username, title, className }) => {
             />
           </div>
         </div>
-
-        {/* <div className="mt-6 text-center">
-          <button
-            className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-700"
-            onClick={onClose}
-          >
-            OK
-          </button>
-        </div> */}
       </div>
     </>
   );

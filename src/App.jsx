@@ -1,6 +1,6 @@
 import React from "react";
 import { AuthProvider } from "./Components/auth";
-import { PopUpProvider } from "./Components/PopUpContext";
+import { PopUpProvider } from "./assets/context/PopUpContext";
 import { LoadingProvider } from "./assets/context/LoadingAnimationContext";
 import { RouterProvider } from "react-router-dom";
 import router from "./Routes";
