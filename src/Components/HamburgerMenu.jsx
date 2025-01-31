@@ -31,7 +31,6 @@ const HamburgerMenu = () => {
         onClick={toggleState}
         className="flex flex-col items-center justify-center gap-1 cursor-pointer z-50 relative"
       >
-        {/* Top Line */}
         <span
           className={`h-1 w-7 rounded-md bg-[#292D32] transition-transform duration-300 ${
             isOn ? "translate-y-[8px] rotate-45" : ""
