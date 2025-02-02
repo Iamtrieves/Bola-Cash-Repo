@@ -11,6 +11,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
 input {
   transition: border-color 0.3s ease;
 }
@@ -38,6 +39,12 @@ input {
   }
 }
 
+@media screen and (min-width: 250px) and (max-width: 460px) {
+  .center {
+    max-width: 70%;
+    text-align: center;
+  }
+}
 @media screen and (min-width: 360px) and (max-width: 450px) {
   div.homecards {
     margin-top: 5rem;

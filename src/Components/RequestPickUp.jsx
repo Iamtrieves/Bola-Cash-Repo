@@ -9,10 +9,10 @@ const RequestPickUp = ({ isVisible }) => {
   return (
     <div>
       <div className="fixed inset-0 bg-[#228B2233] backdrop-blur-sm z-20"></div>
-      <div className="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 p-[1rem] bg-white rounded-md shadow-md md:w-[75%] sm:w-[65%] w-[85%] lg:w-[34rem]">
+      <div className="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 p-4 sm:p-6 bg-white rounded-md shadow-md w-11/12 sm:w-4/5 md:w-3/4 lg:max-w-lg">
         <div>
-          <div className="flex items-center w-full relative py-[0.4375rem]">
-            <h1 className="font-semibold flex-wrap flex py-[0.375rem] lg:text-[1.5rem] md:text-[1rem] text-[0.9rem] lg:leading-[2.25rem] leading-[1.5rem] mx-auto">
+          <div className="flex items-center w-full relative py-2 sm:py-3">
+            <h1 className="font-semibold center text-wrap text-justify flex py-[0.375rem] text-[1.5rem] lg:leading-[2.25rem] leading-[1.5rem] mx-auto">
               Enter Amount of Recyclables
             </h1>
             <div className="lg:size-10 size-7 absolute right-0 justify-end flex">
@@ -25,7 +25,7 @@ const RequestPickUp = ({ isVisible }) => {
             </div>
           </div>
           <div className="py-[0.475rem] max-w-[90%] mx-auto">
-            <p className="text-[#1E1E1E] text-center lg:text-[1.2rem] text-[0.9rem] leading-[0.9rem] lg:leading-[1.5rem]">
+            <p className="text-[#1E1E1E] text-center text-[1.2rem] leading-[1.5rem]">
               Select the time you prefer to receive daily notifications and
               reminders
             </p>
